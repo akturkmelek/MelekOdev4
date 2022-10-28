@@ -34,7 +34,7 @@ public class RegisterIDAndCss
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email")));
         WebElement email = driver.findElement(By.id("email"));
-        email.sendKeys("melusid" + (Math.random() *20 + "@sahibinden.com"));
+        email.sendKeys("meluslussid" + (Math.random() *20 + "@sahibinden.com"));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
         WebElement password = driver.findElement(By.id("password"));
@@ -43,6 +43,7 @@ public class RegisterIDAndCss
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.querySelector('#endUserLicenceAgreement').click()");
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signUpButton")));
         WebElement signUpButton = driver.findElement(By.id("signUpButton"));
         signUpButton.click();
 
@@ -82,7 +83,7 @@ public class RegisterIDAndCss
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email")));
         WebElement email = driver.findElement(By.cssSelector("#email"));
-        email.sendKeys("meluscss" + (Math.random() *20 + "@sahibinden.com"));
+        email.sendKeys("melusluscss" + (Math.random() *20 + "@sahibinden.com"));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
         WebElement password = driver.findElement(By.cssSelector("#password"));
@@ -91,6 +92,7 @@ public class RegisterIDAndCss
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.querySelector('#endUserLicenceAgreement').click()");
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#signUpButton")));
         WebElement signUpButton = driver.findElement(By.cssSelector("#signUpButton"));
         signUpButton.click();
 
@@ -106,4 +108,5 @@ public class RegisterIDAndCss
 
         driver.quit();
     }
+
     }

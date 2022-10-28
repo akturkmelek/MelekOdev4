@@ -42,14 +42,13 @@ public class CorporateRegisterIDAndCss
             WebElement inputSurname = driver.findElement(By.id("surname"));
             System.out.println(inputSurname.getText()+ "Akturk");
 
-
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email")));
             WebElement email = driver.findElement(By.id("email"));
-            email.sendKeys("melusid" + (Math.random() * 20 + "@sahibinden.com"));
+            email.sendKeys("meluslusid" + (Math.random() * 20 + "@sahibinden.com"));
             System.out.println(email.getText());
 
             WebElement inputEmail = driver.findElement(By.id("email"));
-            System.out.println(inputEmail.getText()+ "melusid" + (Math.random() * 20 + "@sahibinden.com"));
+            System.out.println(inputEmail.getText()+ "meluslusid" + (Math.random() * 20 + "@sahibinden.com"));
 
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
             driver.findElement(By.id("password")).sendKeys("123456aB");
@@ -66,7 +65,6 @@ public class CorporateRegisterIDAndCss
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("category")));
             Select realEstateSelect = new Select(driver.findElement(By.id("category")));
             realEstateSelect.selectByValue("200002");
-
 
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("city")));
             Select citySelect = new Select(driver.findElement(By.id("city")));
@@ -147,7 +145,6 @@ public class CorporateRegisterIDAndCss
 
 
             driver.quit();
-            // Thread.sleep(10 * 3000);
 
         }
 
@@ -188,7 +185,7 @@ public class CorporateRegisterIDAndCss
         System.out.println(email.getText());
 
         WebElement inputEmail = driver.findElement(By.cssSelector("#email"));
-        System.out.println(inputEmail.getText()+ "meluscss" + (Math.random() * 20 + "@sahibinden.com"));
+        System.out.println(inputEmail.getText()+ "melusluscss" + (Math.random() * 20 + "@sahibinden.com"));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password")));
         driver.findElement(By.cssSelector("#password")).sendKeys("123456aB");
@@ -205,7 +202,6 @@ public class CorporateRegisterIDAndCss
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#category")));
         Select realEstateSelect = new Select(driver.findElement(By.cssSelector("#category")));
         realEstateSelect.selectByValue("200002");
-
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#city")));
         Select citySelect = new Select(driver.findElement(By.cssSelector("#city")));
@@ -283,7 +279,6 @@ public class CorporateRegisterIDAndCss
         WebElement emailText = driver.findElement(By.className("email"));
         System.out.println("Hesap işlemlerine devam edebilmeniz için " + emailText.getText() + " adresine gönderdiğimiz linki onaylamanızı bekliyoruz.");
 
-       // Thread.sleep(10 * 3000);
 
         driver.quit();
 
@@ -291,7 +286,7 @@ public class CorporateRegisterIDAndCss
 
     }
 
-        }
+}
 
 
 
